@@ -12,7 +12,7 @@ type JobService struct {
 
 func (service *JobService) GetJob(ctx context.Context, request *job.GetJobRequest, resp *job.JobResponse) error {
 
-	log.Println("GetJob called")
+	log.Printf("GetJob called for alias %s\n", request.Name)
 
 	jobValue, ok := service.jobs[request.Name]
 

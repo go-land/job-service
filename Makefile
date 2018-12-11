@@ -33,7 +33,10 @@ proto:
 	protoc --proto_path=${GOPATH}/src:. --go_out=plugins=micro:. proto/*.proto
 
 install:
-	go get -t -v ./...
+	go get -u github.com/kardianos/govendor
+	govendor init
+	govendor fetch github.com/micro/go-micro
+	govendor fetch golang.org/x/net/context
 
 # Build docker image
 build: proto docker_build output

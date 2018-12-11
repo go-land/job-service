@@ -24,15 +24,3 @@ services:
     depends_on:
       - consul
     mem_limit: 128m
-
-#  user-cli:
-#    image: go-land/user-cli:1.0.0
-#    environment:
-#      CONSUL_PORT: "8500"
-#      MICRO_REGISTRY_ADDRESS: "consul:8500"
-##      MICRO_REGISTRY: "mdns"
-#    depends_on:
-#      - consul
-#      - user-service1
-#      - user-service2
-#    mem_limit: 128m
